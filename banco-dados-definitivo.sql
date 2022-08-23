@@ -3,7 +3,7 @@ create database conecte_se;
 use conecte_se;
 
 create table papeis_usuario(
-papel_id int not null,
+papel_id int not null auto_increment,
 nome varchar(50) not null,
 descricao varchar(120) not null,
 primary key(papel_id)
@@ -97,4 +97,15 @@ foreign key(proprietario)
 references usuarios_da_plataforma(apelido)
 );
 
+insert into papeis_usuario(nome, descricao)
+VALUES ('Empreendedor', 'Utiliza a plataforma com objetivo de divulgar sua empresa e/ou encontrar conhecimentos sobre o meio empreendedor.'),
+('Consumidor', 'Utiliza a plataforma com objetivo de encontrar produtos de seu desejo.'),
+('Estudante', 'Utiliza a plataforma com o objetivo de prestar auxílio aos empreendedores e encontrar conhecimentos sobre o meio empreendedor.'),
+('Desenvolvedor','Desenvolve a plataforma Conecte-se');
 
+insert into usuarios_da_plataforma (apelido, cpf, nome, sobrenome, papel, email, telefone, senha) values 
+("aline", "00000000001", "Aline", "Fraga", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160096@restinga.ifrs.edu.br", "51995875224", "alinesenha1"), 
+("bruno", "00000000002", "Bruno", "Neves", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160107@restinga.ifrs.edu.br", "51987546223", "brunosenha1"),
+("rafaela", "00000000003", "Rafaela", "Correa", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160091@restinga.ifrs.edu.br", "51985475621", "rafaelasenha1"),
+("barbara", "00000000004", "Bárbara", "Raupp", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160087@restinga.ifrs.edu.br", "51945687952", "barbarasenha1"),
+("joao", "00000000005", "João", "Trindade", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160104@restinga.ifrs.edu.br", "51963215479", "joaosenha1");
