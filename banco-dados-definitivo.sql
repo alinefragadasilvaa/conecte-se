@@ -38,7 +38,7 @@ descricao varchar(120),
 categoria int not null,
 data_criacao date not null,
 criador varchar(30) not null,
-estado boolean not null,
+estado bit not null,
 primary key(comunidade_id),
 foreign key(criador) 
 references usuarios_da_plataforma(apelido),
@@ -53,7 +53,7 @@ assunto varchar(1000) not null,
 data_criacao date not null,
 autor varchar(30) not null, 
 comunidade int not null,
-estado boolean not null, 
+estado bit not null, 
 primary key(forum_id),
 foreign key(autor)
 references comunidades(criador),
@@ -110,5 +110,20 @@ insert into usuarios_da_plataforma (apelido, cpf, nome, sobrenome, papel, email,
 ("barbara", "00000000004", "Bárbara", "Raupp", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160087@restinga.ifrs.edu.br", "51945687952", "barbarasenha1"),
 ("joao", "00000000005", "João", "Trindade", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160104@restinga.ifrs.edu.br", "51963215479", "joaosenha1");
 
+insert into categorias_comunidades (nome, descricao, criador) values
+("Finanças", "Gestão das receitas da empresa", (select apelido from usuarios_da_plataforma where nome="Aline"),
+("Marketing", "Estudo do mercado, envolvendo a promoção e propaganda da empresa", (select apelido from usuarios_da_plataforma where nome="Aline"),
+("Gestão de Pessoas", "Organização dos clientes, funcionários, fornecedores e colaboradores da empresa", (select apelido from usuarios_da_plataforma where nome="Aline"),
+("Produção/Operação", "Organização dos processos da empresa", (select apelido from usuarios_da_plataforma where nome="Aline");
+ 
+ insert into comunidades(nome, descricao, categoria, data_criacao, criador, estado)values
+('Agricultores da Zona Sul - Porto Alegre', 'Comunidade voltada para a divulgação de produtos orgânicos e troca de conhecimentos.', (select categoria_id from categorias_comunidades where nome="Marketing"), '2022/08/23', (select apelido from usuarios_da_plataforma where nome = 'Aline'), "1"),
+('Empreendendo com eficiência','Aprenda a otimizar suas propagandas e obter maiores recompensas.', (select categoria_id from categorias_comunidades where nome="Marketing"),'2022/01/01', (select apelido from usuarios_da_plataforma where nome = 'Bruno'), "1" ),
+('Criatividade - Como maximizar a sua', 'Em um empreendimento a inovação é crucial.', (select categoria_id from categorias_comunidades where nome="Produção/Processos"), '2022/03/09', (select apelido from usuarios_da_plataforma where nome = Bárbara), "1");
+
 select * from papeis_usuario;
 select * from usuarios_da_plataforma;
+select * from categorias_comunidades;
+select * from comunidades;
+
+
