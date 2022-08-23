@@ -109,3 +109,6 @@ insert into usuarios_da_plataforma (apelido, cpf, nome, sobrenome, papel, email,
 ("rafaela", "00000000003", "Rafaela", "Correa", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160091@restinga.ifrs.edu.br", "51985475621", "rafaelasenha1"),
 ("barbara", "00000000004", "Bárbara", "Raupp", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160087@restinga.ifrs.edu.br", "51945687952", "barbarasenha1"),
 ("joao", "00000000005", "João", "Trindade", (select papel_id from papeis_usuario where nome="Desenvolvedor"), "10160104@restinga.ifrs.edu.br", "51963215479", "joaosenha1");
+
+select * from papeis_usuario;
+select * from usuarios_da_plataforma;
