@@ -89,8 +89,7 @@ proprietario varchar(30) not null,
 ramo int not null,
 fundacao date not null,
 numero_funcionarios int not null,
-email varchar(50) not null,
-telefone varchar(11) not null,
+contato varchar(100) not null,
 primary key(empresa_id),
 foreign key(ramo)
 references ramos_empresas(ramo_id),
@@ -129,6 +128,11 @@ insert into foruns(titulo, assunto, data_criacao, autor, comunidade, estado) val
  insert into respostas_foruns (mensagem, data_criacao, autor, forum) values
 ("Monte um sistema de descontos e divulgue para toda sua lista de contatos de clientes, fiz isso mês passado em minha empresa", "2022-08-23", (select apelido from usuarios_da_plataforma where nome="Aline"), (select forum_id from foruns where titulo="Aumento de vendas")),
 ("Basta plantá-la em um ambiente abaixo de 25ºC, para isso indico a utilização de ventiladores", "2022-08-23", (select apelido from usuarios_da_plataforma where nome="Bruno"), (select forum_id from foruns where titulo="Plantio de cenoura"));
+
+insert into ramos_empresas(nome, descrição) values
+ ('Agricultura Familiar', 'Agricultura familiar é o cultivo da terra realizado por pequenos proprietários rurais, tendo como mão de obra, essencialmente, o núcleo familiar'),
+ ('Desenvolvimento de Softwares', 'Desenvolvimento de software é o ato de elaborar e implementar um sistema computacional, a partir das demandas recebidas.');
+
 
 select * from papeis_usuario;
 select * from usuarios_da_plataforma;
