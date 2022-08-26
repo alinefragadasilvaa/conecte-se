@@ -5,7 +5,7 @@ use conecte_se;
 create table papeis_usuario(
 papel_id int not null auto_increment,
 nome varchar(50) not null,
-descricao varchar(120) not null,
+descricao varchar(200) not null,
 primary key(papel_id)
 );
 
@@ -38,7 +38,7 @@ descricao varchar(120),
 categoria int not null,
 data_criacao date not null,
 criador varchar(30) not null,
-estado bit not null,
+estado int not null,
 primary key(comunidade_id),
 foreign key(criador) 
 references usuarios_da_plataforma(apelido),
@@ -53,7 +53,7 @@ assunto varchar(1000) not null,
 data_criacao date not null,
 autor varchar(30) not null, 
 comunidade int not null,
-estado bit not null, 
+estado int not null, 
 primary key(forum_id),
 foreign key(autor)
 references comunidades(criador),
@@ -130,7 +130,7 @@ insert into foruns(titulo, assunto, data_criacao, autor, comunidade, estado) val
 ("Monte um sistema de descontos e divulgue para toda sua lista de contatos de clientes, fiz isso mês passado em minha empresa", "2022-08-23", (select apelido from usuarios_da_plataforma where nome="Aline"), (select forum_id from foruns where titulo="Aumento de vendas")),
 ("Basta plantá-la em um ambiente abaixo de 25ºC, para isso indico a utilização de ventiladores", "2022-08-23", (select apelido from usuarios_da_plataforma where nome="Bruno"), (select forum_id from foruns where titulo="Plantio de cenoura"));
 
-insert into ramos_empresas(nome, descrição) values
+insert into ramos_empresas(nome, descricao) values
  ('Agricultura Familiar', 'Agricultura familiar é o cultivo da terra realizado por pequenos proprietários rurais, tendo como mão de obra, essencialmente, o núcleo familiar'),
  ('Desenvolvimento de Softwares', 'Desenvolvimento de software é o ato de elaborar e implementar um sistema computacional, a partir das demandas recebidas.');
 
