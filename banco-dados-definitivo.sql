@@ -139,7 +139,8 @@ insert into ramos_empresas(nome, descricao) values
  
  insert into empresas(nome, cnpj, proprietario, ramo, sobre_empresa, fundacao, numero_funcionarios, telefone, email)values
 ('Orgânicos & Caipiras', '00000000000001',(select apelido from usuarios_da_plataforma where nome="bruno"), (select ramo_id from ramos_empresas where nome="Agricultura Familiar"), 'Empresa voltada para agricultura familiar, atua na venda de produtos orgânicos, com entrega domiciliar de produtos como alfaces, temperos, chás entre outros.', '2016-07-12', '5', '51999999999', 'organicoscaipiras@contato.com.br'),
-('Aline Studio de Dança','', (select apelido from usuarios_da_plataforma where apelido="aline"), (select ramo_id from ramos_empresas where nome="Saúde e Bem Estar"), 'Academia de dança que tem como missão contribuir para a manutenção da saúde e bem estar dos alunos', '2022-06-25', '6', '51486325479', 'alinestudiodedanca@contato.com.br');
+('Aline Studio de Dança','', (select apelido from usuarios_da_plataforma where apelido="aline"), (select ramo_id from ramos_empresas where nome="Saúde e Bem Estar"), 'Academia de dança que tem como missão contribuir para a manutenção da saúde e bem estar dos alunos', '2022-06-25', '6', '51486325479', 'alinestudiodedanca@contato.com.br'),
+('A&B Softwares', '00000000000002' ,(select apelido from usuarios_da_plataforma where apelido="aline"), (select ramo_id from ramos_empresas where nome="Desenvolvimento de Softwares"), 'Empresa voltada para o desenvolvimento de softwares, atua no desenvolvimento de pequenos sistemas voltados para o varejo. ', '2022-02-25', '63', '51999999998', 'A&BSoftwares@contato.com');
 
 
 select * from papeis_usuario;
@@ -147,4 +148,5 @@ select * from usuarios_da_plataforma;
 select * from categorias_comunidades;
 select * from comunidades;
 select * from foruns;
- select * from respostas_foruns;
+select * from respostas_foruns;
+select * from empresas; 
