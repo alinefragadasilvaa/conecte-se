@@ -149,4 +149,16 @@ select * from categorias_comunidades;
 select * from comunidades;
 select * from foruns;
 select * from respostas_foruns;
-select * from empresas; 
+select * from ramos_empresas;
+select * from empresas;
+
+select nome from empresas where proprietario="bruno";
+select nome from empresas where proprietario="aline";
+select nome, cnpj from empresas where proprietario="bruno";
+select nome from empresas where cnpj!='';
+select nome from empresas where cnpj='';
+
+select criador,nome from comunidades;
+select titulo from foruns;
+select autor, mensagem from respostas_foruns;
+select mensagem, autor from respostas_foruns where forum=1;
