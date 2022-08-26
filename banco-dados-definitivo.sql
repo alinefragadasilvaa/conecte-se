@@ -5,7 +5,7 @@ use conecte_se;
 create table papeis_usuario(
 papel_id int not null auto_increment,
 nome varchar(50) not null,
-descricao varchar(200) not null,
+descricao varchar(250) not null,
 primary key(papel_id)
 );
 
@@ -24,7 +24,7 @@ primary key(apelido)
 create table categorias_comunidades(
 categoria_id int auto_increment,
 nome varchar(50) not null,
-descricao varchar(120),
+descricao varchar(250),
 criador varchar(30) not null,
 primary key(categoria_id),
 foreign key(criador)
@@ -34,7 +34,7 @@ references usuarios_da_plataforma(apelido)
 create table comunidades(
 comunidade_id int auto_increment,
 nome varchar(50) not null,
-descricao varchar(120),
+descricao varchar(250),
 categoria int not null,
 data_criacao date not null,
 criador varchar(30) not null,
@@ -49,7 +49,7 @@ references categorias_comunidades(categoria_id)
 create table foruns(
 forum_id int auto_increment,
 titulo varchar(50) not null,
-assunto varchar(1000) not null,
+assunto varchar(1500) not null,
 data_criacao date not null,
 autor varchar(30) not null, 
 comunidade int not null,
@@ -63,7 +63,7 @@ references comunidades(comunidade_id)
 
 create table respostas_foruns(
 resposta_id int auto_increment,
-mensagem varchar(1000) not null,
+mensagem varchar(2500) not null,
 data_criacao date not null,
 autor varchar(30) not null, 
 forum int not null,
@@ -77,7 +77,7 @@ references foruns(forum_id)
 create table ramos_empresas(
 ramo_id int auto_increment,
 nome varchar(50) not null,
-descricao varchar(120) not null,
+descricao varchar(250) not null,
 primary key(ramo_id)
 );
 
@@ -87,6 +87,7 @@ nome varchar(50) not null,
 cnpj varchar(14),
 proprietario varchar(30) not null,
 ramo int not null,
+sobre_empresa varchar(250) not null,
 fundacao date not null,
 numero_funcionarios int not null,
 telefone varchar(11) not null,
