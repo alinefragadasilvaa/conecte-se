@@ -133,7 +133,9 @@ insert into foruns(titulo, assunto, data_criacao, autor, comunidade, estado) val
 
 insert into ramos_empresas(nome, descricao) values
  ('Agricultura Familiar', 'Agricultura familiar é o cultivo da terra realizado por pequenos proprietários rurais, tendo como mão de obra, essencialmente, o núcleo familiar'),
- ('Desenvolvimento de Softwares', 'Desenvolvimento de software é o ato de elaborar e implementar um sistema computacional, a partir das demandas recebidas.');
+ ('Desenvolvimento de Softwares', 'Desenvolvimento de software é o ato de elaborar e implementar um sistema computacional, a partir das demandas recebidas.'),
+ ('Saúde e Bem Estar', 'Voltado para a manutenção da saúde e do bem estar das pessoas.'),
+ ('Varejo', 'Venda de produtos e serviços em pequenas quantidades.');
 
 
 select * from papeis_usuario;
