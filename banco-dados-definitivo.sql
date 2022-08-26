@@ -136,6 +136,10 @@ insert into ramos_empresas(nome, descricao) values
  ('Desenvolvimento de Softwares', 'Desenvolvimento de software é o ato de elaborar e implementar um sistema computacional, a partir das demandas recebidas.'),
  ('Saúde e Bem Estar', 'Voltado para a manutenção da saúde e do bem estar das pessoas.'),
  ('Varejo', 'Venda de produtos e serviços em pequenas quantidades.');
+ 
+ insert into empresas(nome, cnpj, proprietario, ramo, sobre_empresa, fundacao, numero_funcionarios, telefone, email)values
+('Orgânicos & Caipiras', '00000000000001',(select apelido from usuarios_da_plataforma where nome="bruno"), (select ramo_id from ramos_empresas where nome="Agricultura Familiar"), 'Empresa voltada para agricultura familiar, atua na venda de produtos orgânicos, com entrega domiciliar de produtos como alfaces, temperos, chás entre outros.', '2016-07-12', '5', '51999999999', 'organicoscaipiras@contato.com.br'),
+('Aline Studio de Dança','', (select apelido from usuarios_da_plataforma where apelido="aline"), (select ramo_id from ramos_empresas where nome="Saúde e Bem Estar"), 'Academia de dança que tem como missão contribuir para a manutenção da saúde e bem estar dos alunos', '2022-06-25', '6', '51486325479', 'alinestudiodedanca@contato.com.br');
 
 
 select * from papeis_usuario;
