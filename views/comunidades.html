@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- título e icone da página -->
+      <link rel="icon" type="imagem/png" href="logo.icone.png" /><title>Conecte-se</title>
+      <!-- link para arquivo de css -->
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- cabeçalho da páhina -->
+    <header>
+      <img src="logo.img.png" alt="logo" class="logo">
+      <!-- menu horizontal -->
+      <nav id="menu">
+        <ul>
+          <li><img src="home.png" width="20px" height="18px"> <a href="/">INÍCIO</a></li>
+          <li><img src="user.png" width="20px" height="18px"> <a href="/comunidades">COMUNIDADES</a></li>
+          <li><img src="suitcase.png" width="20px" height="18px"> <a href="#">EMPREENDEDORES</a></li>
+          <li><img src="users.png" width="20px" height="18px"> <a href="#">FALE CONOSCO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="destaque">
+      <img src="banner.jpg">
+  </section>  
+    <main>
+      <!-- título principal da página -->
+      <h1 class="titulo">COMUNIDADES</h1>
+      <!-- barra de busca de comunidades -->
+      <section class="secao" id="sectionBusca">
+        <input type="text" class="inputTexto" id="textoBusca" placeholder="Digite sua busca :)"/>
+        <input type="submit" class="botao" id="botaoBuscar" value="BUSCAR">
+      </section>
+      <!-- botões de interação com a tabela de comunidades -->
+      <section class="secao" id="sectionBotoesTabela">
+        <a href="/cadastrar"><input type="submit" class="botao" id="botaoEtrar" value="ENTRAR"></a>
+        <input type="submit" class="botao" id="botaoExcluir" value="EXCLUIR">
+        <a href="/cadastrar"><input type="submit" class="botao" id="botaoCriar" value="CRIAR"></a>
+      </section>
+      <!--subtítulo da página-->
+      <h2 class="subtitulo">RECOMENDAÇÕES PARA VOCÊ</h2><br>
+      <!--tabela de comunidades -->
+      <table id="tabelaComunidades">
+        <tr>
+          <th></th>
+          <th>Nome da comunidade</th>
+          <th>Membros</th>
+          <th>Avaliação</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="caixa1" id="caixa1"><a href="/oi"></a></td>
+          <td>Marketing Digital do meu negócio</td>
+          <td>190<img src="icon.png" height="22px" width="20px" id="img"></td>
+          <td>5.0</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="caixa1" id="caixa1"><a href="/oi"></a></td>
+          <td>Empreendimentos Zona Sul</td>
+          <td>150<img src="icon.png" height="22px" width="20px" id="img"></td>
+          <td>4.5</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="caixa1" id="caixa1"><a href="/oi"></a></td>
+          <td>Como administrar minhas finanças</td>
+          <td>180<img src="icon.png" height="22px" width="20px"id="img"></td>
+          <td>4.8</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="caixa1" id="caixa1"><a href="/oi"></a></td>
+          <td>Prestação de serviços</td>
+          <td>120<img src="icon.png" height="22px" width="20px"></td>
+          <td>4.3</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="caixa1" id="caixa1"><a href="/oi"></a></td>
+          <td>Roceiros do RS</td>
+          <td>180<img src="icon.png" height="22px" width="20px"></td>
+          <td>5.0</td>
+        </tr>
+      </table>
+    </main> 
+    <footer>
+      <p>Conecte-se | Idealizado por Rafaela Correa, João Victor Prado, Bárbara Raupp, Bruno Neves e Aline Fraga | 2022</p>
+    </footer>
+  </body>
+</html>
