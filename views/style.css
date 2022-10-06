@@ -103,21 +103,26 @@ footer p{
     display: block;
 }
 
+.form-buttons{
+    flex-direction: column;
+    display: flex;
+}
+
 .botao{
-    margin: 5px;
+    margin: auto;
     padding: 5px;
-    width: 100px;
+    width: 150px;
     height: 30px;
-    background-color: #2a313b;
+    background-color: white;
     border: none;
-    color: white;
+    color: #2a313b;
     cursor: pointer;
     border-radius: 2px;
 }
 
 .botao:hover{
-    background-color: rgb(202, 200, 200);
-    color: #2a313b;
+    background-color: #1e2022;
+    color: white;
     transition: 0.3s;
 }
 
@@ -131,7 +136,7 @@ footer p{
     border-radius: 2px;
 }
 
-.select{
+.select, .date{
     margin: 5px;
     padding: 5px;
     height: 30px;
@@ -140,6 +145,7 @@ footer p{
     color: rgb(105, 105, 105);
     border-radius: 2px;
 }
+
 
 .secao{
     padding: 5px;
