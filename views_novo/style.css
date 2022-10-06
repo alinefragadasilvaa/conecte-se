@@ -14,9 +14,8 @@ a, label{
 
 /* Cabeçalho da página ajustes padrões*/
 header{
-    height: 250px;
+    height: 170px;
     background-color: #2a313b;
-    text-align: center;
 }
 
 .logo{
@@ -27,8 +26,7 @@ header{
  }
 
  nav{
-    text-align: center;
-    height: 150px;
+    height: 75px;
     background-color: #000000;
     width: 100%;
     padding: 1%;
@@ -36,7 +34,7 @@ header{
 
 li{
     display: inline-block;
-    padding: 20px;
+    padding: 1%;
     text-decoration: none;
 }
 
@@ -108,7 +106,7 @@ footer p{
     display: flex;
 }
 
-.botao{
+.botaoClaro{
     margin: auto;
     padding: 5px;
     width: 150px;
@@ -120,16 +118,45 @@ footer p{
     border-radius: 2px;
 }
 
-.botao:hover{
+.botaoClaro:hover {
     background-color: #1e2022;
     color: white;
     transition: 0.3s;
 }
 
+.botaoEscuro {
+    margin: auto;
+    padding: 5px;
+    width: 150px;
+    height: 30px;
+    background-color: #1e2022;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.botaoEscuro:hover{
+    background-color: white;
+    color: #1e2022;
+    transition: 0.3s;
+}
+
+
 .inputTexto{
     margin: 5px;
     padding: 5px;
     height: 30px;
+    width: 300px;
+    border: 2px solid #2a313b;
+    color: black;
+    border-radius: 2px;
+}
+
+.inputTextoGrande{
+    resize: none;
+    padding: 8px;
+    height: 100px;
     width: 300px;
     border: 2px solid #2a313b;
     color: black;
@@ -146,6 +173,10 @@ footer p{
     border-radius: 2px;
 }
 
+span{
+    padding: 0px;
+    color: white;
+}
 
 .secao{
     padding: 5px;
@@ -153,11 +184,11 @@ footer p{
 
 /* ELEMENTOS DA PÁGINA COMUNIDADES*/
 
-.tabela{
+#tabelaComunidades{
     width: 600px;
 }
 
-.tabela, th, td{
+#tabelaComunidades, th, td{
     margin: auto;
     margin-bottom: 50px;
     border: 2px solid #2a313b;
@@ -185,34 +216,6 @@ footer p{
 
 #tituloCriarConta{
     color: white;
-}
-
-#botaoCriarConta{
-    background-color: white;
-    color: #2a313b;
-    display: block;
-    margin: auto;
-    width: 120px;
-}
-
-#botaoCriarConta:hover{
-    background-color: rgb(202, 200, 200);
-    color: #2a313b;
-    transition: 0.3s;
-}
-
-#botaoCancelar{
-    background-color: white;
-    color: #2a313b;
-    display: block;
-    margin: auto;
-    width: 120px;
-}
-
-#botaoCancelar:hover{
-    background-color: rgb(202, 200, 200);
-    color: #2a313b;
-    transition: 0.3s;
 }
 
 #checkTermos{
