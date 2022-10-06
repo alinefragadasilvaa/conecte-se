@@ -127,7 +127,7 @@ footer p{
 .botaoEscuro {
     margin: auto;
     padding: 5px;
-    width: 150px;
+    width: 100px;
     height: 30px;
     background-color: #1e2022;
     border: none;
@@ -173,22 +173,17 @@ footer p{
     border-radius: 2px;
 }
 
-span{
-    padding: 0px;
-    color: white;
-}
-
 .secao{
     padding: 5px;
 }
 
 /* ELEMENTOS DA PÁGINA COMUNIDADES*/
 
-#tabelaComunidades{
+.tabela{
     width: 600px;
 }
 
-#tabelaComunidades, th, td{
+.tabela, th, td{
     margin: auto;
     margin-bottom: 50px;
     border: 2px solid #2a313b;
@@ -246,4 +241,3 @@ span{
 textarea:focus, input:focus{
     outline: none;
 }
-
