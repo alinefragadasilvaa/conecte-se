@@ -1,4 +1,4 @@
-﻿/* GERAL */
+/* GERAL */
 
 /* Ajustes padrões da página*/
 *{
@@ -77,9 +77,15 @@ footer p{
 
 /* CLASSES PADRÕES */ 
 
-.titulo{
+.tituloEscuro{
     padding: 20px;
     color: #2a313b;
+    text-align: center; 
+}
+
+.tituloClaro{
+    padding: 20px;
+    color: white;
     text-align: center; 
 }
 
