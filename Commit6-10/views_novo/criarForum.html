@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="logo.icone.png" /><title>Conecte-se</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.img.png" alt="logo" class="logo">
+        <nav id="menu">
+            <ul>
+            <li><img src="home.png" width="20px" height="18px"> <a href="/">INÍCIO</a></li>
+            <li><img src="user.png" width="20px" height="18px"> <a href="#">TIPOS DE USUARIO</a></li>
+            <li><img src="suitcase.png" width="20px" height="18px"> <a href="#">USUÁRIOS DA PLATAFORMA</a></li>
+            <li><img src="users.png" width="20px" height="18px"> <a href="#">CATEGORIAS DE COMUNIDADE</a></li>
+            <li><img src="users.png" width="20px" height="18px"> <a href="/criarComunidade.html">COMUNIDADES</a></li>
+            <li><img src="user.png" width="20px" height="18px"> <a href="#">FÓRUM</a></li>
+            <li><img src="users.png" width="20px" height="18px"> <a href="/respostasForuns.html">RESPOSTAS DOS FÓRUNS</a></li>
+            <li><img src="users.png" width="20px" height="18px"> <a href="#">RAMOS DAS EMPRESAS</a></li>
+            <li><img src="users.png" width="20px" height="18px"> <a href="#">EMPRESAS</a></li
+            </ul>
+        </nav>
+    </header>
+    <section id="destaque">
+        <img src="banner.jpg">
+    </section>  
+    <main>
+        <div id="containerCriacao">
+
+            <h1 class="tituloClaro">CRIAR FÓRUM</h1>
+    
+            <form action="/criarForum" method="post">
+                
+                <label for="tituloForum" class="rotulo">TÍTULO </label>
+                <input class="inputTexto" type="text" name="tituloForum" id="tituloForum" placeholder="Digite o título do fórum">
+        
+                <label for="assuntoForum" class="rotulo">ASSUNTO</label>
+                <input type="text" class="inputTexto" name="assuntoForum" id="assuntoForum" placeholder="Digite o assunto do fórum">
+        
+                <label for="dataCriacaoForum" class="rotulo">DATA DE CRIAÇÃO</label>
+                <input type="date" class="date" name="dataCriacaoForum" id="dataCriacaoForum"> <br><br>
+
+                <label for="autorForum" class="rotulo">AUTOR</label>
+                <input type="text" class="inputTexto" name="autorForum" id="autorForum" placeholder="Digite seu apelido">
+
+                <label for="comunidade" class="rotulo">COMUNIDADE</label>
+                <select  class="select" name="comunidade" id="comunidade">
+                    <option value="" disabled selected hidden>Selecione uma comunidade</option>
+                    <!--
+                        <% comunidades.forEach((c, index) => { %>
+						<option value="<%= c.comunidade_id %>"><%= c.nome %></option>
+					<% }) %>
+                    -->
+                </select>
+
+                <label for="estadoForum" class="rotulo">ESTADO DA COMUNIDADE</label>
+                <select  class="select" name="estadoForum" id="estadoForum">
+                    <option value="" disabled selected hidden>Selecione um estado</option>
+                    <option value="1">Ativado</option>
+                    <option value="0">Desativado</option>
+                </select>
+
+                <br><br>
+
+                <section class="form-buttons">
+                <input type="submit" class="botaoClaro" id="botaoCriarForum" value="CRIAR FÓRUM"><br>
+                <input type="reset" class="botaoClaro" id="botaoCancelarCriacao" value="CANCELAR">
+                </section>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Conecte-se | Idealizado por Rafaela Correa, João Victor Prado, Bárbara Raupp, Bruno Neves e Aline Fraga | 2022</p>
+    </footer>
+</body>
+</html>
