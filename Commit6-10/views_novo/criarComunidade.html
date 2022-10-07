@@ -30,7 +30,7 @@
     <main>
         <div id="containerCriacao">
 
-            <h1 class="titulo" id="tituloCriarConta">CRIAR COMUNIDADE</h1>
+            <h1 class="tituloClaro">CRIAR COMUNIDADE</h1>
     
             <form action="/criarComunidade" method="post">
                 
@@ -38,10 +38,10 @@
                 <input class="inputTexto" type="text" name="nomeComunidade" id="nomeComunidade" placeholder="Digite o nome da comunidade">
         
                 <label for="descricaoComunidade" class="rotulo">DESCRIÇÃO</label>
-                <input type="descricaoComunidade" class="inputTexto" name="descricaoComunidade" id="descricaoComunidade" placeholder="Digite a descrição da sua comunidade">
+                <input type="text" class="inputTexto" name="descricaoComunidade" id="descricaoComunidade" placeholder="Digite a descrição da sua comunidade">
         
-                <label for="categoriaComunidade" class="rotulo">CATEGORIA DA COMUNIDADE</label>
-                <select  class="select" name="categoriaComunidade" id="categoriaComunidade" aria-placeholder="Categoria da comunidade">
+                <label for="categoria" class="rotulo">CATEGORIA DA COMUNIDADE</label>
+                <select  class="select" name="categoria" id="categoria">
                     <option value="" disabled selected hidden>Selecione uma categoria</option>
                     <!--
                         <% categorias_comunidade.forEach((c, index) => { %>
@@ -50,19 +50,21 @@
                     -->
                 </select>
 
-                <label for="criador " class="rotulo">CRIADOR</label>
-                <input type="text" class="inputTexto" name="criador" id="criador" placeholder="Digite o nome do criador">
+                <label for="criadorComunidade" class="rotulo">CRIADOR</label>
+                <input type="text" class="inputTexto" name="cricriadorComunidadeador" id="criadorComunidade" placeholder="Digite seu apelido">
         
                 <label for="estadoComunidade" class="rotulo">ESTADO DA COMUNIDADE</label>
-                <select  class="select" name="estadoComunidade" id="estadoComunidade" aria-placeholder="Categoria da comunidade">
+                <select  class="select" name="estadoComunidade" id="estadoComunidade">
                     <option value="" disabled selected hidden>Selecione um estado</option>
                     <option value="1">Ativada</option>
                     <option value="0">Desativada</option>
                 </select>
         
                 <label for="dataCriacaoComunidade" class="rotulo">DATA DE CRIAÇÃO</label>
-
-                <input type="date" class="date" name="dataCriacaoComunidade" id="dataCriacaoComunidade" placeholder="Data de criação da comunidade"> <br><br>
+                <input type="date" class="date" name="dataCriacaoComunidade" id="dataCriacaoComunidade"> 
+                
+                <br><br>
+                
                 <section class="form-buttons">
                 <input type="submit" class="botaoClaro" id="botaoCriarComunidade" value="CRIAR COMUNIDADE"><br>
                 <input type="reset" class="botaoClaro" id="botaoCancelarCadastro" value="CANCELAR">
