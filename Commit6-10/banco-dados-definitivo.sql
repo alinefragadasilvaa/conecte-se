@@ -18,7 +18,9 @@ papel int not null,
 email varchar(50) not null,
 telefone varchar(11) not null,
 senha varchar(255) not null,
-primary key(apelido)
+primary key(apelido),
+foreign key(papel)
+references papeis_usuario(papel_id)
 );
 
 create table categorias_comunidades(
