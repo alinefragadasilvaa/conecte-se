@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="logo.icone.png" /><title>Conecte-se</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img src="../logo.img.png" alt="logo" class="logo">
+        <nav id="menu">
+            <ul>
+                <li><img src="../user.png" width="20px" height="18px"> <a href="/">INÍCIO</a></li>
+                <li><img src="../user.png" width="20px" height="18px"> <a href="/papeisUsuarios">TIPOS DE USUARIO</a></li>
+                <li><img src="../suitcase.png" width="20px" height="18px"> <a href="/usuariosPlataforma">USUÁRIOS DA PLATAFORMA</a></li>
+                <li><img src="../users.png" width="20px" height="18px"> <a href="/categoriasComunidades">CATEGORIAS DE COMUNIDADE</a></li>
+                <li><img src="../user.png" width="20px" height="18px"> <a href="/comunidades">COMUNIDADES</a></li>
+                <li><img src="../user.png" width="20px" height="18px"> <a href="/foruns">FÓRUM</a></li>
+                <li><img src="../users.png" width="20px" height="18px"> <a href="/respostasForuns">RESPOSTAS DOS FÓRUNS</a></li>
+                <li><img src="../users.png" width="20px" height="18px"> <a href="/ramosEmpresas">RAMOS DAS EMPRESAS</a></li>
+                <li><img src="../users.png" width="20px" height="18px"> <a href="/empresas">EMPRESAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="destaque">
+        <img src="../banner.jpg">
+    </section>  
+    <main>
+        <div id="containerCriacao">
+
+            <h1 class="tituloClaro"> CRIAR RESPOSTA FÓRUM</h1>
+    
+            <form action="/criarRespostaForum" method="post">
+                
+                <label for="mensagem" class="rotulo">RESPOSTA</label>
+
+                <textarea placeholder="Digite sua resposta" class="inputTextoGrande" name="mensagem" id="mensagem" rows="4" cols="50"></textarea>
+                <br>
+
+                <label for="autor" class="rotulo">AUTOR</label>
+                <input type="text" class="inputTexto" name="autor" id="autor" placeholder="Digite seu apelido">
+
+                <br>
+                <label for="dataCriacao" class="rotulo">DATA DE CRIAÇÃO</label>
+                <input type="date" class="date" name="dataCriacao" id="dataCriacao" ><br>
+
+                <label for="forum" class="rotulo">FÓRUM</label>
+                <select  class="select" name="forum" id="forum">
+                    <option value="" disabled selected hidden>Selecione um fórum para responder</option>
+                    
+                        <% foruns.forEach((f, index) => { %>
+						<option value="<%= f.forum_id %>"><%= f.titulo%></option>
+					<% }) %>
+                    
+                </select> <br><br>
+
+                <section class="form-buttons">
+                <input type="submit" class="botaoClaro"  value="RESPONDER FÓRUM"><br>
+                <input type="reset" class="botaoClaro"  value="CANCELAR">
+                </section>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Conecte-se | Idealizado por Rafaela Correa, João Victor Prado, Bárbara Raupp, Bruno Neves e Aline Fraga | 2022</p>
+    </footer>
+</body>
+</html>

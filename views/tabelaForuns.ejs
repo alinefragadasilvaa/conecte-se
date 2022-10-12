@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- título e icone da página -->
+      <link rel="icon" type="imagem/png" href="logo.icone.png" /><title>Conecte-se</title>
+      <!-- link para arquivo de css -->
+      <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+    <!-- cabeçalho da página -->
+    <header>
+      <img src="../logo.img.png" alt="logo" class="logo">
+      <nav id="menu">
+          <ul>
+              <li><img src="../user.png" width="20px" height="18px"> <a href="/">INÍCIO</a></li>
+              <li><img src="../user.png" width="20px" height="18px"> <a href="/papeisUsuarios">TIPOS DE USUARIO</a></li>
+              <li><img src="../suitcase.png" width="20px" height="18px"> <a href="/usuariosPlataforma">USUÁRIOS DA PLATAFORMA</a></li>
+              <li><img src="../users.png" width="20px" height="18px"> <a href="/categoriasComunidades">CATEGORIAS DE COMUNIDADE</a></li>
+              <li><img src="../user.png" width="20px" height="18px"> <a href="/comunidades">COMUNIDADES</a></li>
+              <li><img src="../user.png" width="20px" height="18px"> <a href="/foruns">FÓRUM</a></li>
+              <li><img src="../users.png" width="20px" height="18px"> <a href="/respostasForuns">RESPOSTAS DOS FÓRUNS</a></li>
+              <li><img src="../users.png" width="20px" height="18px"> <a href="/ramosEmpresas">RAMOS DAS EMPRESAS</a></li>
+              <li><img src="../users.png" width="20px" height="18px"> <a href="/empresas">EMPRESAS</a></li>
+          </ul>
+      </nav>
+  </header>
+  <section id="destaque">
+      <img src="../banner.jpg">
+  </section>  
+    <main>
+   
+      <h1 class="tituloEscuro">FÓRUNS</h1>
+    
+      <form action="/filtrarForum" method="post">
+        <input type="text" class="inputTexto" name="titulo" id="textoBusca" placeholder="Utilize '%' para auxiliar sua busca"/>
+        <input type="submit" class="botaoEscuro" value="BUSCAR">
+      </form>
+
+      <section class="secao" id="sectionBotoesTabela">
+        <a href="/formForum"><input type="submit" class="botaoEscuro"  value="CRIAR"></a>
+        <a href="#"><input type="submit" class="botaoEscuro"  value="EDITAR"></a> 
+        <a href="#"><input type="submit" class="botaoEscuro"  value="DELETAR"></a>
+      </section>
+      
+      <h2 class="subtitulo">BUSQUE FÓRUNS</h2><br>
+  
+        <table id="tabelaEmpresas" class="tabela">
+          <tr>
+            <th>Título</th>
+            <th>Assunto</th>
+            <th>Data Criação</th>
+            <th>Autor</th>
+            <th>Comunidade</th>
+            <th>Estado</th>
+          </tr>
+              <% foruns.forEach((f, index) => { %>
+          <tr>
+            <td><%= f.titulo %></td>
+            <td><%= f.assunto %></td>
+            <td><%= f.data_criacao %></td>
+            <td><%= f.autor %></td>
+            <td><%= f.comunidade %></td>
+            <td><%= f.estado %></td>
+          </tr>
+          <% }) %>
+        </table>
+    </main> 
+    <footer>
+      <p>Conecte-se | Idealizado por Rafaela Correa, João Victor Prado, Bárbara Raupp, Bruno Neves e Aline Fraga | 2022</p>
+    </footer>
+  </body>
+</html>
