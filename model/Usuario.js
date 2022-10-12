@@ -1,4 +1,4 @@
-module.exports = class Usuario { 
+module.exports = class Usuario {
   constructor() {
     this.apelido = "";
     this.cpf = "";
@@ -7,104 +7,116 @@ module.exports = class Usuario {
     this.papel = 0;
     this.email = "";
     this.telefone = "";
-    this.senha= "";
+    this.senha = "";
   }
-  
+
   setApelido(a) {
     this.apelido = a;
   }
-  
+
   getApelido() {
-    return this.apelido;  
+    return this.apelido;
   }
-  
+
   setCpf(c) {
     this.cpf = c;
   }
-  
+
   geCpf() {
-    return this.cpf;  
+    return this.cpf;
   }
-  
+
   setNome(n) {
     this.nome = n;
   }
-  
+
   getNome() {
-    return this.nome;  
+    return this.nome;
   }
-  
+
   setSobrenome(s) {
     this.sobrenome = s;
   }
-  
+
   getSobrenome() {
-    return this.sobrenome;  
+    return this.sobrenome;
   }
 
   setPapel(p) {
-      this.papel = p;
-    }
-    
-    getPapel() {
-      return this.papel;  
-    }
+    this.papel = p;
+  }
 
-    setEmail(e) {
-      this.email = e;
-    }
-    
-    getEmail() {
-      return this.email;  
-    }
+  getPapel() {
+    return this.papel;
+  }
 
-    setTelefone(t) {
-      this.telefone = t;
-    }
-    
-    getTelefone() {
-      return this.telefone;  
-    }
+  setEmail(e) {
+    this.email = e;
+  }
 
-    setSenha(sn) {
-      this.senha = sn;
-    }
-    
-    getSenha() {
-      return this.s;  
-    }
-          
-  
+  getEmail() {
+    return this.email;
+  }
+
+  setTelefone(t) {
+    this.telefone = t;
+  }
+
+  getTelefone() {
+    return this.telefone;
+  }
+
+  setSenha(sn) {
+    this.senha = sn;
+  }
+
+  getSenha() {
+    return this.s;
+  }
+
   inserir(connection) {
     try {
-        var sql = "INSERT INTO  usuarios_da_plataforma (apelido,cpf,nome,sobrenome,papel,email,telefone,senha) VALUES(?,?,?,?,?,?,?,?)";
+      var sql =
+        "INSERT INTO  usuarios_da_plataforma (apelido,cpf,nome,sobrenome,papel,email,telefone,senha) VALUES(?,?,?,?,?,?,?,?)";
 
-        connection.query(sql, [this.apelido, this.cpf,  this.nome,  this.sobrenome, this.papel, this.email, this.telefone, this.senha ], function (err, result) {
+      connection.query(
+        sql,
+        [
+          this.apelido,
+          this.cpf,
+          this.nome,
+          this.sobrenome,
+          this.papel,
+          this.email,
+          this.telefone,
+          this.senha,
+        ],
+        function (err, result) {
           if (err) throw "teste";
           //if (err) console.error('err from callback: ' + err.stack);
-          });
+        }
+      );
     } catch (e) {
-        console.error('err from callback: ' + e.stack);
-        throw e;
+      console.error("err from callback: " + e.stack);
+      throw e;
     }
   }
-  
+
   listar(connection, callback) {
     var sql = "SELECT * FROM usuarios_da_plataforma";
 
     connection.query(sql, function (err, result) {
-        if (err) throw err;
-        return callback(result);
-    });    
+      if (err) throw err;
+      return callback(result);
+    });
   }
-  
+
   pesquisar(connection, callback) {
     var sql = "SELECT * FROM usuarios_da_plataforma WHERE nome like ?";
 
     connection.query(sql, [this.nome], function (err, result) {
-        if (err) throw err;
-        return callback(result);
-    });    
+      if (err) throw err;
+      return callback(result);
+    });
   }
-  
-}
+};
