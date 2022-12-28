@@ -1,3 +1,7 @@
 # conecte-se
 
-Obs.: Baixar arquivos e, antes de executar, criar projeto no Node.
+Obs. 1: Arquivos ZIP já possuem o projeto Node criado
+
+Obs. 2: Oarquivo index.js é o da última entrega do tarbalho de prog
+
+Obs. 3: O ZIP da versão final está em processo de construção do sistema de login e direcionamento de páginas personalizado por papéis de usuário
